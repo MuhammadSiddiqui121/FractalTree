@@ -13,24 +13,24 @@ public void draw()
 	line(320,480,320,380);   
 	drawBranches(320,380,100,3*Math.PI/2);  //will add later 
 } 
-public void drawBranches(int x,int y, double branchLen, double angle) 
+public void drawBranches(int x,int y, double branchLength, double angle) 
 {   
 	     double angle1 = angle + branchAngle;
   double angle2 = angle - branchAngle;
   
-  branchLen = branchLen * fractionLength;
+  branchLength = branchLength * fractionLength;
   
-  int endingX1 = (int)(branchLen*Math.cos(angle1) + x);
-  int endingY1 = (int)(branchLen*Math.sin(angle1) + y);
-  int endingX2 = (int)(branchLen*Math.cos(angle2) + x);
-  int endingY2 = (int)(branchLen*Math.sin(angle2) + y);
+  int endingX1 = (int)(branchLength*Math.cos(angle1) + x);
+  int endingY1 = (int)(branchLength*Math.sin(angle1) + y);
+  int endingX2 = (int)(branchLength*Math.cos(angle2) + x);
+  int endingY2 = (int)(branchLength*Math.sin(angle2) + y);
   
   line(x,y,endingX1,endingY1);
   line(x,y,endingX2,endingY2);
     
-  if(branchLen > smallestBranch){
-    drawBranches(endingX1, endingY1, branchLen-4,angle1+PI/2);
-    drawBranches(endingX2, endingY2, branchLen-4, angle2-PI/2);
+  if(branchLength > smallestBranch){
+    drawBranches(endingX1, endingY1, branchLength-4,angle1+PI/2);
+    drawBranches(endingX2, endingY2, branchLength-4, angle2-PI/2);
     
   }
 } 
