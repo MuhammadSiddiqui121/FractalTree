@@ -29,8 +29,8 @@ public void drawBranches(int x,int y, double branchLength, double angle)
   line(x,y,endingX2,endingY2);
     
   if(branchLen > smallestBranch){
-    drawBranches(endingX1, endingY1, branchLen-2,angle1+PI/2);
-    drawBranches(endingX2, endingY2, branchLen-2, angle2-PI/2);
+    drawBranches(endingX1, endingY1, branchLen-4,angle1+PI/2);
+    drawBranches(endingX2, endingY2, branchLen-4, angle2-PI/2);
     
   }
 } 
